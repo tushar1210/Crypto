@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qFN-um-sXH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRYPTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sZ-qy-ctm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="304"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="75"/>
+                                <color key="textColor" red="0.30288350582122803" green="0.26400670409202576" blue="0.065840281546115875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="9"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2G-0G-myd">
+                                <rect key="frame" x="0.0" y="487" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="0NN-IA-9Bs"/>
+                                    <constraint firstAttribute="height" constant="180" id="fPH-fz-rhH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BTC"/>
+                                <connections>
+                                    <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fY0-kx-nog"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1809020.200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTW-RO-t5T">
+                                <rect key="frame" x="-19.5" y="304" width="414" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="9wb-VU-teZ"/>
+                                    <constraint firstAttribute="width" constant="414" id="ykk-Jo-F0D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-ys-b7y">
+                                <rect key="frame" x="195" y="487" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="DBl-YW-S5v"/>
+                                    <constraint firstAttribute="width" constant="180" id="srR-zR-5ci"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="litecoin"/>
+                                <connections>
+                                    <action selector="valueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQC-YF-sUO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXR-ys-b7y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8df-hO-l6f"/>
+                            <constraint firstItem="rTW-RO-t5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D5u-vq-w27"/>
+                            <constraint firstItem="s2G-0G-myd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GvJ-Ql-KxG"/>
+                            <constraint firstAttribute="trailing" secondItem="qFN-um-sXH" secondAttribute="trailing" id="Hzm-BU-igJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXR-ys-b7y" secondAttribute="bottom" id="LQf-i7-9oW"/>
+                            <constraint firstItem="qFN-um-sXH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nm9-SN-BSo"/>
+                            <constraint firstAttribute="bottom" secondItem="qFN-um-sXH" secondAttribute="bottom" id="SDd-rj-87e"/>
+                            <constraint firstItem="s2G-0G-myd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Upd-rh-f8T"/>
+                            <constraint firstItem="rTW-RO-t5T" firstAttribute="top" secondItem="7sZ-qy-ctm" secondAttribute="bottom" id="dNB-bn-b0c"/>
+                            <constraint firstItem="7sZ-qy-ctm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hxd-RA-Cez"/>
+                            <constraint firstItem="7sZ-qy-ctm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lzy-xn-qsg"/>
+                            <constraint firstItem="qFN-um-sXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tlL-3x-Lyl"/>
+                            <constraint firstItem="7sZ-qy-ctm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wpw-nJ-ooz"/>
+                            <constraint firstItem="rTW-RO-t5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zmH-H6-TeL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="value" destination="rTW-RO-t5T" id="6tK-uR-53S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BTC" width="720" height="720"/>
+        <image name="bg" width="640" height="1136"/>
+        <image name="litecoin" width="330" height="330"/>
+    </resources>
 </document>
