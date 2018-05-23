@@ -16,16 +16,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var value: UILabel!
     let url : String = "https://api.cryptonator.com/api/ticker/"
     
-   
+  
     @IBAction func coinButton(_ sender: AnyObject) {
         let check:Int = sender.tag
-        print(url+typeArray[check-1])
+                print(url+typeArray[check-1])
         
-        getValue(finalUrl:url+typeArray[check-1])
+                getValue(finalUrl:url+typeArray[check-1])
     }
     
+//    @IBAction func coinButton(_ sender: AnyObject) {
+//        let check:Int = sender.tag
+//        print(url+typeArray[check-1])
+//
+//        getValue(finalUrl:url+typeArray[check-1])
+//    }
     
-    let typeArray = ["btc-usd","ltc-usd"]
+  
+    
+    
+    
+    let typeArray = ["btc-usd","ltc-usd","etc-usd","xrp-usd"]
 ////////////////////////////////////////////?????///////////////////////////////
     func getValue(finalUrl:String){
         
@@ -46,15 +56,15 @@ class ViewController: UIViewController {
     }
     
     func JSONParsing(json:JSON){
-                     if let results = json["ticker"]["price"].double{
+        let results = json["ticker"]["price"].floatValue
                     print(results)
                     print("Success")
-                        value.text = String(results)
-                }
-                else{
-                    
-                        value.text="Data Unavailable"
-                }
+                        value.text = "$  "+String(results)
+        
+//                else{
+//
+//                        value.text="Data Unavailable"
+//                }
         
         
     }

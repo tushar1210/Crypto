@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,17 +35,6 @@
                                 <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="9"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2G-0G-myd">
-                                <rect key="frame" x="0.0" y="487" width="180" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="0NN-IA-9Bs"/>
-                                    <constraint firstAttribute="height" constant="180" id="fPH-fz-rhH"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="BTC"/>
-                                <connections>
-                                    <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fY0-kx-nog"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1809020.200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTW-RO-t5T">
                                 <rect key="frame" x="-19.5" y="304" width="414" height="59"/>
                                 <constraints>
@@ -55,32 +45,83 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-ys-b7y">
-                                <rect key="frame" x="195" y="487" width="180" height="180"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqh-8L-aKo">
+                                <rect key="frame" x="0.0" y="363" width="375" height="304"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3f-wd-QEx">
+                                        <rect key="frame" x="0.0" y="193" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="9Dt-at-lCL"/>
+                                            <constraint firstAttribute="width" constant="111" id="QEZ-RH-ByJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="BTC"/>
+                                        <connections>
+                                            <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="572-wO-8D1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV3-B4-5Ao">
+                                        <rect key="frame" x="296" y="193" width="79" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="79" id="Q6j-WL-IdE"/>
+                                            <constraint firstAttribute="height" constant="111" id="Vw8-GQ-wsV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="2000px-Ethereum_logo_2014.svg"/>
+                                        <connections>
+                                            <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wfl-bs-tnI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-ys-b7y">
+                                        <rect key="frame" x="132" y="193" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bXR-ys-b7y" secondAttribute="height" multiplier="1:1" id="7Cb-hc-0ZO"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="111" id="Fia-k0-HZE"/>
+                                            <constraint firstAttribute="width" constant="111" id="XZO-nA-5Zw"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="cWb-CF-LcB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="eaq-TW-3qg"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="111" id="nys-k8-brF"/>
+                                            <constraint firstAttribute="height" constant="111" id="wfN-2L-T26"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="litecoin"/>
+                                        <connections>
+                                            <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pko-GA-U25"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-va-rvb">
+                                        <rect key="frame" x="132" y="66" width="111" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="cryptocurrency_blockchain_crypto-04-512"/>
+                                        <connections>
+                                            <action selector="coinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzS-ka-M6W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="DBl-YW-S5v"/>
-                                    <constraint firstAttribute="width" constant="180" id="srR-zR-5ci"/>
+                                    <constraint firstItem="bXR-ys-b7y" firstAttribute="centerY" secondItem="wqh-8L-aKo" secondAttribute="centerY" constant="96.5" id="3eC-JS-aLv"/>
+                                    <constraint firstAttribute="bottom" secondItem="y3f-wd-QEx" secondAttribute="bottom" id="3tO-e7-FIx"/>
+                                    <constraint firstAttribute="bottom" secondItem="aV3-B4-5Ao" secondAttribute="bottom" id="Ufp-gz-8a8"/>
+                                    <constraint firstItem="y3f-wd-QEx" firstAttribute="leading" secondItem="wqh-8L-aKo" secondAttribute="leading" id="VC8-Q5-GXZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aV3-B4-5Ao" secondAttribute="trailing" id="hYf-Or-FKU"/>
+                                    <constraint firstItem="bXR-ys-b7y" firstAttribute="centerX" secondItem="wqh-8L-aKo" secondAttribute="centerX" id="lao-uB-ZJU"/>
+                                    <constraint firstAttribute="bottom" secondItem="bXR-ys-b7y" secondAttribute="bottom" id="log-7u-0fC"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="litecoin"/>
-                                <connections>
-                                    <action selector="valueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQC-YF-sUO"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bXR-ys-b7y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8df-hO-l6f"/>
                             <constraint firstItem="rTW-RO-t5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D5u-vq-w27"/>
-                            <constraint firstItem="s2G-0G-myd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GvJ-Ql-KxG"/>
                             <constraint firstAttribute="trailing" secondItem="qFN-um-sXH" secondAttribute="trailing" id="Hzm-BU-igJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXR-ys-b7y" secondAttribute="bottom" id="LQf-i7-9oW"/>
                             <constraint firstItem="qFN-um-sXH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nm9-SN-BSo"/>
                             <constraint firstAttribute="bottom" secondItem="qFN-um-sXH" secondAttribute="bottom" id="SDd-rj-87e"/>
-                            <constraint firstItem="s2G-0G-myd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Upd-rh-f8T"/>
+                            <constraint firstAttribute="bottom" secondItem="wqh-8L-aKo" secondAttribute="bottom" id="aXe-nC-o2A"/>
+                            <constraint firstItem="rTW-RO-t5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bNa-ix-N9T"/>
                             <constraint firstItem="rTW-RO-t5T" firstAttribute="top" secondItem="7sZ-qy-ctm" secondAttribute="bottom" id="dNB-bn-b0c"/>
+                            <constraint firstItem="wqh-8L-aKo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ecq-U3-hPq"/>
                             <constraint firstItem="7sZ-qy-ctm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hxd-RA-Cez"/>
                             <constraint firstItem="7sZ-qy-ctm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lzy-xn-qsg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wqh-8L-aKo" secondAttribute="trailing" id="rNS-CY-D0a"/>
                             <constraint firstItem="qFN-um-sXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tlL-3x-Lyl"/>
+                            <constraint firstItem="wqh-8L-aKo" firstAttribute="top" secondItem="rTW-RO-t5T" secondAttribute="bottom" id="uZ1-Sx-eLd"/>
                             <constraint firstItem="7sZ-qy-ctm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wpw-nJ-ooz"/>
                             <constraint firstItem="rTW-RO-t5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zmH-H6-TeL"/>
                         </constraints>
@@ -92,12 +133,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+            <point key="canvasLocation" x="135.19999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>
+        <image name="2000px-Ethereum_logo_2014.svg" width="2000" height="3258"/>
         <image name="BTC" width="720" height="720"/>
         <image name="bg" width="640" height="1136"/>
+        <image name="cryptocurrency_blockchain_crypto-04-512" width="512" height="512"/>
         <image name="litecoin" width="330" height="330"/>
     </resources>
 </document>
